@@ -1,0 +1,12 @@
+{
+	"name": "server",
+	"version": "0.0.1",
+	"description": "Server for GranValesDV SAP",
+	
+	"dependencies": {
+		"shortid": "~2.2.6",
+		"basic-auth": "~1.0.4",
+		"json-format": "~0.1.2",
+		"nodemailer":  "~2.6.4"
+	}
+}

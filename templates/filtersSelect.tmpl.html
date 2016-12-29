@@ -1,0 +1,19 @@
+<div class="form-inline center-block main-font main-color">
+	
+	<div class="form-group">
+	  <label for="vacancySelect">Вакансия</label>
+	  <select class="form-control" id="vacancySelect" ng-model="mainCtrl.filterByVacancy" ng-change="mainCtrl.filterVacancies()">
+		  <option ng-repeat="vacancyName in mainCtrl.vacanciesListAll">{{vacancyName}}</option>
+		</select>
+	</div><!-- <span class="hidden-xs">&emsp;</span> -->
+
+	<div class="form-group">
+	  <label for="fleetSelect">Флот</label>
+    <select class="form-control" id="fleetSelect" ng-model="mainCtrl.filterByFleet" ng-change="mainCtrl.filterVacancies()">
+		  <option ng-repeat="fleetType in mainCtrl.fleetList">{{fleetType}}</option>
+		</select>
+	</div>
+
+</div>
+
+	

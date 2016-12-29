@@ -1,0 +1,103 @@
+<!-- E D I T  V A C A N C Y -->
+<form class="form-horizontal col-xs-12 vacancy-editing" name="shipownerForm" novalidate="" ng-controller="VacancyInstanceEditingCtrl as ctrl">
+	<div class="row">
+		
+		<div class="form-group">
+	    <label for="shipownerCompanyName" class="col-xs-3 col-md-2 control-label">Название компании</label>
+	    <div class="col-xs-9 col-md-10">
+	    	<input type="text" maxlength="70" class="form-control input-sm" id="shipownerCompanyName" placeholder="" ng-model="ctrl.shipowner.companyName" ng-init="ctrl.shipowner.companyName = vacancy.companyName" required>
+	    </div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="shipownerVesselType" class="col-xs-3 col-md-2 control-label">Тип судна</label>
+	    <div class="col-xs-9 col-md-10">
+	    	<input type="text" maxlength="70" class="form-control input-sm" id="shipownerVesselType" placeholder="" ng-model="ctrl.shipowner.vesselType" ng-init="ctrl.shipowner.vesselType = vacancy.vesselType" required>
+	    </div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="shipownerFleetType" class="col-xs-3 col-md-2 control-label">Флот</label>
+	    <div class="col-xs-9 col-md-10">
+		    <select class="form-control input-sm" id="shipownerFleetType" ng-model="ctrl.shipowner.fleetType" ng-init="ctrl.shipowner.fleetType = vacancy.fleetType" required>
+				  <option value="Рыбодобывающий">Рыбодобывающий</option>
+				  <option value="Транспортный">Транспортный</option>
+				</select>
+			</div>
+		</div>
+
+	  <div class="form-group">
+	    <label for="shipownerDW" class="col-xs-3 col-md-2 control-label">DW (т.)</label>
+	    <div class="col-xs-9 col-md-10">
+		    <input type="number" min="0" class="form-control input-sm" id="shipownerDW" placeholder="" ng-model="ctrl.shipowner.vesselDW" ng-init="ctrl.shipowner.vesselDW = vacancy.vesselDW" required>
+		  </div>
+		</div>
+
+	  <div class="form-group">
+	    <label for="shipownerDateOfConstr" class="col-xs-3 col-md-2 control-label">Дата постройки </label>
+	    <div class="col-xs-9 col-md-10">
+		    <select class="form-control input-sm" id="shipownerDateOfConstr" ng-model="ctrl.shipowner.vesselDateOfConstr" ng-init="ctrl.shipowner.vesselDateOfConstr = vacancy.vesselDateOfConstr" required>
+				  <option ng-repeat="yearOfConst in ctrl.shipownerDateOfConstrRange">{{yearOfConst}}</option>
+				</select>
+			</div>
+		</div>
+
+	  <div class="form-group">
+	    <label for="shipownerVacancy" class="col-xs-3 col-md-2 control-label">Вакансия</label>
+	    <div class="col-xs-9 col-md-10">
+		    <select class="form-control input-sm" id="shipownerVacancy" ng-model="ctrl.shipowner.vacancy" ng-init="ctrl.shipowner.vacancy = vacancy.vacancy" required>
+				  <option ng-repeat="vacancyName in vacCtrl.vacanciesList">{{vacancyName}}</option>
+				</select>
+			</div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="shipownerPayment" class="col-xs-3 col-md-2 control-label">Зарплата</label>
+	    <div class="col-xs-9 col-md-10">
+		    <input type="text" maxlength="70" class="form-control input-sm" id="shipownerPayment" placeholder="" ng-model="ctrl.shipowner.payment" ng-init="ctrl.shipowner.payment = vacancy.payment" required>
+		  </div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="shipownerOptional" class="col-xs-3 col-md-2 control-label">Доп. данные по вакансии</label>
+	    <div class="col-xs-9 col-md-10">
+		    <textarea class="form-control input-sm" maxlength="400" id="shipownerOptional" name="" cols="" rows="2" ng-model="ctrl.shipowner.optional" ng-init="ctrl.shipowner.optional = vacancy.optional" required></textarea>
+	  	</div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="shipownerPhone" class="col-xs-3 col-md-2 control-label">Телефон отдела кадров</label>
+	    <div class="col-xs-9 col-md-10">
+		    <input type="tel" maxlength="70" class="form-control input-sm" id="shipownerPhone" placeholder="" ng-model="ctrl.shipowner.phone" ng-init="ctrl.shipowner.phone = vacancy.phone" required>
+		  </div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="shipownerEmail" class="col-xs-3 col-md-2 control-label">E-mail</label>
+	    <div class="col-xs-9 col-md-10">
+		    <input type="email" maxlength="70" class="form-control" id="shipownerEmail" placeholder="" ng-model="ctrl.shipowner.email" ng-init="ctrl.shipowner.email = vacancy.email" required name="shipownerEmail">
+		  </div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="shipownerDate" class="col-xs-4 col-sm-3 col-md-2 control-label">Размещено</label>
+	    <div class="col-xs-8 col-sm-9 col-md-10">
+		    <input type="text" maxlength="70" class="form-control input-sm" id="shipownerDate" placeholder="" ng-model="ctrl.shipowner.date" ng-init="ctrl.shipowner.date = (vacancy.date | date : 'dd.MM.yyyy')" gv-date-picker required>
+		  </div>
+	  </div>
+		
+		<div class="row">
+			<div class="col-xs-6 col-sm-3 col-sm-offset-6">
+				<button type="button" class="btn btn-default btn-block button-gradient main-color" ng-click="vacancy.isEditing = false; vacCtrl.isEditing = false;"><span class="glyphicon glyphicon-remove"></span>&nbsp;Отмена</button>
+			</div>
+
+			<div class="col-xs-6 col-sm-3">
+				<button type="button" class="btn btn-default btn-block button-gradient main-color" data-toggle="modal" data-target="#confEditModal" ng-init="ctrl.form = shipownerForm; ctrl.objOld = vacancy; ctrl.obj = ctrl.shipowner" ng-click=""><span class="glyphicon glyphicon-save"></span>&nbsp;Сохранить</button>
+			</div>
+			
+		</div>
+
+		<div gv-confirm-edit-modal form-ctrl="ctrl"></div>
+
+	</div>
+</form>

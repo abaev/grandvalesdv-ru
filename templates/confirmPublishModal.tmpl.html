@@ -1,0 +1,25 @@
+<!-- Confirm publish modal -->
+<div class="modal fade" id="confPublishModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+	    
+	    <div class="modal-header">
+	      <h3 class="modal-title" id="confPublishModalLabel" ng-show="ctrl.updObj.objType === 'review'">Убрать с сайта</h3>
+        <h3 class="modal-title" id="confPublishModalLabel" ng-show="ctrl.updObj.objType === 'reviewNew'">Поместить на сайт</h3>
+      </div>
+
+      <div class="modal-body">
+        <p>Подтвердите действие</p>
+      </div>
+			
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default button-gradient-gray main-color" data-dismiss="modal">Отмена</button>
+        <button type="button" class="btn btn-default button-gradient main-color" ng-click="ctrl.gvPublish(ctrl.updObj)" data-dismiss="modal">
+          <span ng-show="ctrl.updObj.objType === 'review'">Убрать</span>
+          <span ng-show="ctrl.updObj.objType === 'reviewNew'">Поместить</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div> <!-- End Modal -->

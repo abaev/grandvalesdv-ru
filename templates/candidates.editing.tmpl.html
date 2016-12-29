@@ -1,0 +1,54 @@
+<!-- C A N D I D A T E S -->
+
+<div ng-controller="CandidatesEditController as candCtrl">
+
+	<div class="form-group col-xs-4 col-md-4 col-md-offset-1 col-lg-3 col-lg-offset-2">
+	  <label for="vacancySelect">Вакансия</label>
+	  <select class="form-control" id="vacancySelect" ng-model="candCtrl.filterByVacancy" ng-change="candCtrl.filterCandidates()">
+		  <option ng-repeat="vacancyName in candCtrl.vacanciesListAll">{{vacancyName}}</option>
+		</select>
+
+	</div>
+
+	<div class="form-group col-xs-4 col-md-4 col-lg-3">
+	  <label for="search">Поиск</label>
+	  <input type="text" class="form-control" id="search" ng-model="candCtrl.search">
+	</div>
+	
+	<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+		<div class="main-content col-xs-12">
+			<h4 class="main-color main-font main-font-semi-bold">Результатов поиска: {{ (candCtrl.candidatesFiltered | filter : candCtrl.search).length }}</h4>
+
+			<div class="col-xs-12 vacancy-wrap main-color main-font" ng-repeat="candidate in candCtrl.candidatesFiltered | filter : candCtrl.search | orderBy: 'date' : 'true'">
+				<p>ФИО: <span class="text-primary">{{candidate.name}}</span></p>
+				<p>Год рождения: <span class="text-primary">{{candidate.ageYear}}</span></p>
+				<p>Место проживания: <span class="text-primary">{{candidate.place}}</span></p>
+				<p>Должность: <span class="text-primary">{{candidate.vacancies.join(', ')}}</span></p>
+				<p>Опыт работы: <span class="text-primary">{{candidate.experience}}</span></p>
+				<p>Последнее место работы: <span class="text-primary">{{candidate.lastJob}}</span></p>
+				<p>Мобильный телефон: <span class="text-primary">{{candidate.phone}}</span></p>
+				<p>E-mail: <span class="text-primary">{{candidate.email}}</span></p>
+				<p>Размещено: <span class="text-primary">{{candidate.date | date : 'dd.MM.yyyy'}}</span></p>
+				<p>ID: <span class="text-primary">{{candidate.id}}</span></p>
+				
+				<div class="row">
+					<!-- Удалить, оставил покамест на всякий случай -->
+					<!-- <div class="col-xs-6 col-sm-3 col-sm-offset-6">
+						<button type="button" class="btn btn-default btn-block button-gradient main-color" ng-click=""><span class="glyphicon glyphicon-pencil"></span>&nbsp;Изменить</button>
+					</div> -->
+
+					<div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-9">
+						<!-- Вызывается modal для подтверждения,
+						оттуда уже взывается candCtrl.gvDelete(candidate) -->
+						<button type="button" class="btn btn-default btn-block button-gradient main-color" data-toggle="modal" data-target="#confDelModal" ng-click="candCtrl.updObj = candidate"><span class="glyphicon glyphicon-trash"></span>&nbsp;Удалить</button> 
+					</div>
+				</div>
+				
+				<div gv-confirm-del-modal ctrl="candCtrl"></div>
+
+			</div>
+
+		</div>
+	</div>
+
+</div>

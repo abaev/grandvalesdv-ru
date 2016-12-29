@@ -1,0 +1,28 @@
+<h4 class="text-center main-font-semi-bold">Вход в редакторский интерфейс<br>сайта Гранд Валес ДВ</h4>
+<form class="form col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4" name="loginForm">
+  
+  <div class="form-group">
+    <label for="userName" class="">Имя</label>
+    <div class="">
+      <input type="text" class="form-control" id="userName" placeholder="" ng-model="mainCtrl.user.name">
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="userPassword" class="">Пароль</label>
+    <div class="">
+      <input type="password" class="form-control" id="userPassword" placeholder="" ng-model="mainCtrl.user.password">
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-12">
+        <button type="submit" class="btn btn-default btn-block button-gradient main-color" ng-click="mainCtrl.auth(mainCtrl.user)">Войти</button>
+      </div>
+    </div>
+  </div>
+  
+  <p class="text-danger main-font" ng-show="mainCtrl.authStatus === 'Denied'">Неверное имя пользователя/пароль</p>
+</form>
+

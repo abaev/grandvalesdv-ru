@@ -1,0 +1,209 @@
+p {
+	margin: 0px;
+}
+
+body {
+	background-color: #e0f8f7;
+}
+
+.main {
+	
+}
+
+.main-font {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+
+.main-font-semi-bold {
+	font-weight: 600;
+}
+
+.main-font-size {
+	font-size: 14px;
+}
+
+.main-font-16 {
+	font-size: 16px;
+}
+
+.main-font-20 {
+	font-size: 20px;
+}
+
+.main-color {
+	color: #4c5f7e;
+}
+
+.wrap {
+	/*min-height: 100%;*/
+	background-color: #e0f8f7;
+	overflow: hidden;
+}
+
+
+/* Сайдбар */
+.sidebar-main,
+.main-content {
+	border-radius: 10px;
+	background-color: rgba(100, 126, 174, .5);
+}
+
+button .glyphicon {
+	vertical-align: -12%;
+}
+
+button {
+	font-weight: 600 !important;
+}
+
+.sidebar label {
+	font-size: 24px;
+}
+
+.button-gradient,
+.button-gradient:hover,
+.button-gradient:focus {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#98befc+0,ffffff+40,ffffff+60,98befc+100,ffffff+100,98befc+100 */
+	background: #98befc; /* Old browsers */
+	background: -moz-linear-gradient(top,  #98befc 0%, #ffffff 40%, #ffffff 60%, #98befc 100%, #ffffff 100%, #98befc 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #98befc 0%,#ffffff 40%,#ffffff 60%,#98befc 100%,#ffffff 100%,#98befc 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #98befc 0%,#ffffff 40%,#ffffff 60%,#98befc 100%,#ffffff 100%,#98befc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#98befc', endColorstr='#98befc',GradientType=0 ); /* IE6-9 */
+}
+
+.candidate-form,
+.shipowner-form {
+	margin-top: 5px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	background-color: white;
+}
+
+.shipowner-form {
+	margin-top: -15px;
+}
+
+.sidebar-hr {
+	margin-top: -10px;
+}
+/* Конец Сайдбар */
+
+/* Основной контент */
+.vacancy-wrap {
+	padding-right: 10px;
+	padding-left: 10px;
+	overflow: hidden;
+	color: black;
+	background-color: white;
+	border-bottom: 1px solid #337ab7;
+}
+
+.vacancy-wrap:last-child {
+	margin-bottom: 10px;
+	border-bottom: none;
+}
+
+.vacancy-wrap p:first-child {
+	margin-top: 10px;
+}
+
+.vacancy-wrap p:last-child,
+.vacancy-wrap button:not([data-dismiss="modal"]) {
+	/* За исключением кнопок в модальных окнах, ха-ха!! */
+	margin-bottom: 10px;
+}
+/* Конец Основной контент */
+
+
+
+.candidate-form label {
+	font-size: 14px;
+}
+.shipowner-form label {
+	font-size: 14px;
+}
+
+.margin-top-5 {
+	margin-top: 5px;
+}
+
+
+/*Отзывы*/
+.read-reviews {
+	padding: 10px;
+	border-radius: 10px;
+	background-color: white;
+	margin-bottom: 15px;
+}
+
+.review-author,
+.review-date {
+	display: inline-block;
+	font-size: .9em;
+}
+
+.read-reviews .review:last-child hr {
+	display: none;
+}
+
+.review {
+	line-height: 1.1;
+	overflow: hidden;
+}
+
+.reviews {
+	background-color: white;
+}
+
+.review-form {
+	margin-top: -10px;
+}
+
+.margin-top-5 {
+	margin-top: 5px;
+}
+
+.button-gradient-gray,
+.button-gradient-gray:hover,
+.button-gradient-gray:focus {
+ 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c8c8c8+0,fcfcfc+40,fcfcfc+60,c8c8c8+100,fcfcfc+100,c8c8c8+100 */
+	background: #c8c8c8 !important; /* Old browsers */
+	background: -moz-linear-gradient(top,  #c8c8c8 0%, #fcfcfc 40%, #fcfcfc 60%, #c8c8c8 100%, #fcfcfc 100%, #c8c8c8 100%) !important; /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #c8c8c8 0%,#fcfcfc 40%,#fcfcfc 60%,#c8c8c8 100%,#fcfcfc 100%,#c8c8c8 100%) !important; /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #c8c8c8 0%,#fcfcfc 40%,#fcfcfc 60%,#c8c8c8 100%,#fcfcfc 100%,#c8c8c8 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c8c8c8', endColorstr='#c8c8c8',GradientType=0 ); /* IE6-9 */
+ }
+
+
+/* Футер */
+.footer-wrap {
+	height: 90px;
+	border-top: 2px dotted #4c5f7e;
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#010e24+0,203251+50,010e24+100 */
+	background: #010e24 !important; /* Old browsers */
+	background: -moz-linear-gradient(top,  #010e24 0%, #203251 50%, #010e24 100%) !important; /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #010e24 0%,#203251 50%,#010e24 100%) !important; /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #010e24 0%,#203251 50%,#010e24 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#010e24', endColorstr='#010e24',GradientType=0 ); /* IE6-9 */
+}
+
+
+/* Вход */
+div[gv-auth] {
+	margin-top: 100px;
+}
+
+nav {
+	margin-top: 10px;
+}
+
+.button-add {
+	margin-top: 25px;
+}
+
+.vacancy-editing {
+	padding-top: 15px;
+}

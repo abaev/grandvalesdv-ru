@@ -1,0 +1,558 @@
+@font-face {  /* Рукописный шрифт для Наши контакты */
+	font-family: Ariston;
+  src: url("./fonts/ariston-normal.ttf");
+}
+
+html { /* для sticky footer в том числе */
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a1dbff+0,cbebff+26,f0f9ff+100 */
+	background: #a1dbff !important; /* Old browsers */
+	background: -moz-linear-gradient(top,  #a1dbff 0%, #cbebff 26%, #f0f9ff 100%) !important; /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #a1dbff 0%,#cbebff 26%,#f0f9ff 100%) !important; /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #a1dbff 0%,#cbebff 26%,#f0f9ff 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1dbff', endColorstr='#f0f9ff',GradientType=0 ); /* IE6-9 */
+}
+
+p {
+	margin: 0px;
+}
+
+.main-font {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+
+.main-font-semi-bold {
+	font-weight: 600;
+}
+
+.main-font-size {
+	font-size: 14px;
+}
+
+.main-font-16 {
+	font-size: 16px;
+}
+
+.main-font-20 {
+	font-size: 20px;
+}
+
+.main-color {
+	color: #4c5f7e;
+}
+
+.wrap { /* для sticky footer */
+	margin-bottom: 90px !important;
+	/*overflow: hidden;*/
+}
+
+button {
+	font-weight: 600 !important;
+	overflow: hidden;
+}
+
+
+/* Шапка.
+Гранд-Валес ДВ, контакты, звезда */
+header.header {
+	height: 367px;
+	margin-top: 50px;
+	position: relative;
+	background-image: url("./img/head_img.jpg");
+	background-size: cover;
+	border-radius: 10px;
+}
+
+.grand-vales-title {
+	width: 405px;
+	height: 81px;
+	position: relative;
+	left: 10px;
+	top: 10px;
+	background-image: url("./img/gv-big.png");
+	background-size: cover;
+}
+
+.grand-vales-contacts {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	border-radius: 10px;
+	padding: 5px 10px;
+	background-color: rgba(255, 255, 255, .7);
+	border: 2px solid rgba(0, 0, 0, .5);
+}
+
+.contacts-header {
+	margin-bottom: 0px; /* Убираем отступы Bootstrap'а */
+	font-family: Ariston, arial;
+	font-weight: bold;
+	font-size: 24px;
+	text-shadow: 0px 0px 8px white;
+	text-align: right;
+	color: #cd0000;
+}
+
+.contacts-content {
+	text-align: right;
+	line-height: initial;
+	font-size: 16px;
+}
+.contacts-content > p {
+	margin-bottom: 10px;
+}
+
+.star {
+	width: 251px;
+	height: 247px;
+	position: absolute;
+	top: -50px;
+	right: -50px;
+	opacity: .3;
+	background-image: url("./img/star.png");
+	background-size: cover;
+}
+
+/* Переопределение шапки для xs landscape  
+Шрифты мельче чем на остальных режимах,
+но картинка с маяком есть */
+@media screen and (max-device-width: 767px) and (orientation: landscape) {
+	.header-background {
+		margin-top: 0px;
+		background-color: transparent;
+	}
+
+	header.header {
+		height: 367px;
+		margin-top: 50px;
+		position: relative;
+		background-image: url("./img/head_img.jpg");
+		background-size: cover;
+		border-radius: 10px;
+	}
+
+	.grand-vales-title {
+		width: 347px;
+		height: 69px;
+		position: relative;
+		left: 10px;
+		top: 10px;
+		background-image: url("./img/gv-big.png");
+		background-size: cover;
+	}
+
+	.grand-vales-contacts {
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		border-radius: 10px;
+		padding: 5px 10px;
+		background-color: rgba(255, 255, 255, .7);
+		border: 2px solid rgba(0, 0, 0, .5);
+	}
+
+	.contacts-header {
+		margin-bottom: 0px; /* Убираем отступы Bootstrap'а */
+		font-family: Ariston, arial;
+		font-weight: bold;
+		font-size: 20px;
+		text-shadow: 0px 0px 8px white;
+		text-align: right;
+		color: #cd0000;
+	}
+
+	.contacts-content {
+		text-align: right;
+		line-height: initial;
+		font-size: 14px;
+	}
+}
+
+/* Переопределение шапки для xs portrait 
+не показываем маяк, шрифты помельче вот это все */
+@media screen and (max-width: 767px) and (orientation: portrait) {
+	.header-background {
+		margin-top: 50px;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#009cea+0,53cbf1+69,87e0fd+100 */
+		background: #009cea !important; /* Old browsers */
+		background: -moz-linear-gradient(top,  #009cea 0%, #53cbf1 69%, #87e0fd 100%) !important; /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  #009cea 0%,#53cbf1 69%,#87e0fd 100%) !important; /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  #009cea 0%,#53cbf1 69%,#87e0fd 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009cea', endColorstr='#87e0fd',GradientType=0 ); /* IE6-9 */
+	}
+
+	header.header {
+		margin-top: 0px;
+		height: auto;
+		background-image: none;
+	}
+
+	.grand-vales-title {
+		width: 290px;
+		height: 58px;
+		position: static;
+		margin: 0 auto;
+		background-image: url("./img/gv-big.png");
+		background-size: cover;
+	}
+
+	.grand-vales-contacts {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		position: static;
+		border-radius: 0px;
+		padding: 0px;
+		background-color: transparent;
+		border: none;
+	}
+
+	.contacts-header {
+		margin-bottom: 0px; /* Убираем отступы Bootstrap'а */
+		font-family: Ariston, arial;
+		font-weight: bold;
+		font-size: 20px;
+		text-shadow: 0px 0px 8px white;
+		text-align: right;
+		color: #cd0000;
+	}
+
+	.contacts-content {
+		text-align: right;
+		line-height: initial;
+		font-size: 14px;
+	}
+}
+/* Конец шапки */
+
+
+
+/* О компании */
+.about-conteiner {
+	margin-top: 5px;
+}
+
+.about-content {
+	padding: 10px 10px;
+	background-color: #4c5f7e;
+	border-radius: 10px;
+	color: white;
+}
+
+/* Скрытие О компании на xs */
+@media screen and (max-width: 767px) {
+	.about-content-hide {
+		height: 70px !important;
+		overflow: hidden !important;
+	}
+
+	.about-content-show {
+		height: auto !important;
+		overflow: auto !important;
+	}
+
+	.text-gradient {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0px;
+		top: 0px;
+		border-radius: 10px;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,4c5f7e+100&0+0,1+100 */
+		background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(76,95,126,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(76,95,126,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(76,95,126,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#4c5f7e',GradientType=0 ); /* IE6-9 */
+	}
+
+	.show-about-button {
+		position: absolute;
+		bottom: 0px;
+		left: 44%;
+		z-index: 500;
+		border: none !important;
+		background: transparent !important;
+		box-shadow: none !important;
+	}
+}
+/* Конец О компании */
+
+
+/* Сайдбар */
+.sidebar-main,
+.main-content {
+	margin-top: 10px;
+	border-radius: 10px;
+	background-color: rgba(100, 126, 174, .5);
+}
+
+button .glyphicon {
+	vertical-align: -12%;
+}
+
+.sidebar label {
+	font-size: 24px;
+}
+
+.button-gradient,
+.button-gradient:hover,
+.button-gradient:focus {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#98befc+0,ffffff+40,ffffff+60,98befc+100,ffffff+100,98befc+100 */
+	background: #98befc; /* Old browsers */
+	background: -moz-linear-gradient(top,  #98befc 0%, #ffffff 40%, #ffffff 60%, #98befc 100%, #ffffff 100%, #98befc 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #98befc 0%,#ffffff 40%,#ffffff 60%,#98befc 100%,#ffffff 100%,#98befc 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #98befc 0%,#ffffff 40%,#ffffff 60%,#98befc 100%,#ffffff 100%,#98befc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#98befc', endColorstr='#98befc',GradientType=0 ); /* IE6-9 */
+}
+
+.candidate-form,
+.shipowner-form {
+	margin-top: 5px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	background-color: white;
+}
+
+.shipowner-form {
+	margin-top: -15px;
+}
+
+.sidebar-hr {
+	margin-top: -10px;
+}
+
+input.ng-invalid.ng-touched.ng-dirty,
+select.ng-invalid.ng-touched.ng-dirty,
+textarea.ng-invalid.ng-touched.ng-dirty {
+	border: 1px solid red;
+}
+/* Конец Сайдбар */
+
+
+/* Основной контент */
+.vacancy-wrap {
+	padding-right: 10px;
+	padding-left: 10px;
+	overflow: hidden;
+	color: black;
+	background-color: white;
+	border-bottom: 1px solid #337ab7;
+}
+
+.main-content .vacancy-wrap:first-child {
+	margin-top: 10px;
+}
+
+.vacancy-wrap p:first-child {
+	margin-top: 10px;
+}
+
+.vacancy-wrap p:last-child {
+	margin-bottom: 10px;
+}
+
+.vacancy-wrap:last-child {
+	margin-bottom: 10px;
+	border-bottom: none;
+}
+
+.padding-xs-left-15 .form-group {
+	margin-top: 10px;
+}
+
+.padding-xs-left-15 {
+	padding-left: 0px !important;
+}
+
+@media screen and (max-width: 767px) {
+	.padding-xs-left-15 {
+		padding-left: 15px !important;
+	}
+}
+/* Конец Основной контент */
+
+
+
+.candidate-form label {
+	font-size: 14px;
+}
+.shipowner-form label {
+	font-size: 14px;
+}
+
+.margin-top-5 {
+	margin-top: 5px;
+}
+
+
+/*Отзывы*/
+.read-reviews {
+	max-height: 300px;
+	margin-top: 15px;
+	overflow: auto;
+}
+
+.review-author,
+.review-date {
+	display: inline-block;
+	font-size: .9em;
+}
+
+.read-reviews .review:last-child hr {
+	display: none;
+}
+
+.review {
+	line-height: 1.1;
+	overflow: hidden;
+}
+
+.sidebar-reviews {
+	padding-bottom: 15px;
+	margin-top: 10px;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, .7);
+}
+
+.reviews {
+	background-color: white;
+}
+
+.review-form {
+	margin-top: -10px;
+}
+
+.button-gradient-gray,
+.button-gradient-gray:hover,
+.button-gradient-gray:focus {
+ 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c8c8c8+0,fcfcfc+40,fcfcfc+60,c8c8c8+100,fcfcfc+100,c8c8c8+100 */
+	background: #c8c8c8 !important; /* Old browsers */
+	background: -moz-linear-gradient(top,  #c8c8c8 0%, #fcfcfc 40%, #fcfcfc 60%, #c8c8c8 100%, #fcfcfc 100%, #c8c8c8 100%) !important; /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #c8c8c8 0%,#fcfcfc 40%,#fcfcfc 60%,#c8c8c8 100%,#fcfcfc 100%,#c8c8c8 100%) !important; /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #c8c8c8 0%,#fcfcfc 40%,#fcfcfc 60%,#c8c8c8 100%,#fcfcfc 100%,#c8c8c8 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c8c8c8', endColorstr='#c8c8c8',GradientType=0 ); /* IE6-9 */
+ }
+
+
+/* Футер */
+.footer-wrap { /* для sticky footer в том числе */
+	position: absolute !important;
+  bottom: 0px !important;
+  width: 100%;
+	height: 90px;
+	
+	/* Наконец-то понял, почему футер висел на мобильных:
+	всё из-за header.header { ... margin-top: 50px; } */
+	margin-bottom: -50px; /* благодаря этому - не висит */
+	  	
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#010e24+0,203251+50,010e24+100 */
+	background: #010e24 !important; /* Old browsers */
+	background: -moz-linear-gradient(top,  #010e24 0%, #203251 50%, #010e24 100%) !important; /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #010e24 0%,#203251 50%,#010e24 100%) !important; /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #010e24 0%,#203251 50%,#010e24 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#010e24', endColorstr='#010e24',GradientType=0 ); /* IE6-9 */
+}
+
+.footer-content {
+	
+}
+
+.credits {
+	color: #777;
+	font-size: .8em;
+}
+
+.gv-logo-footer {
+	margin-top: 5px;
+	float: left;
+	width: 217px;
+	height: 43px;
+	background-image: url("./img/gv-white.png");
+	background-size: cover;
+}
+
+.contacts-footer {
+	float: right;
+	margin-top: 5px;
+	color: white;
+	text-align: left;
+	font-size: .8em;
+} 
+
+.gv-credits-footer {
+	width: 550px;
+}
+
+.footer-hr {
+	margin-top: 5px !important;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-device-width: 767px) and (orientation: landscape) {
+	/* xs landscape - в футере только дизайнер и разработчик
+	на двух разных строках, всё остальное также как в остальных режимах */
+	/* для sticky footer */
+	.footer-wrap {
+		height: 100px !important;
+	}
+
+	.wrap { 
+		margin-bottom: 100px !important;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	/* для sticky footer */
+	.footer-wrap {
+		height: 100px !important;
+	}
+
+	.wrap { 
+		margin-bottom: 100px !important;
+	}
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+	/* Ну а на xs в portrait в футере все в одну колонку */
+	.gv-logo-footer {
+		margin-top: 5px;
+		width: 217px;
+		height: 43px;
+		background-image: url("./img/gv-white.png");
+		background-size: cover;
+		float: none;
+		margin: 0 auto;
+	}
+
+	.contacts-footer {
+		float: none;
+		margin-top: 5px;
+		text-align: center;
+	} 
+
+	.gv-credits-footer {
+		width: 100%;
+	}
+
+	.footer-hr {
+		margin-top: 5px !important;
+		margin-bottom: 10px;
+	}
+	
+	/* для sticky footer */
+	.footer-wrap {
+		height: 147px !important;
+	}
+
+	.wrap { 
+		margin-bottom: 147px !important;
+	}
+}
+
+
+

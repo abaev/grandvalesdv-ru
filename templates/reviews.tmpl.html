@@ -1,0 +1,46 @@
+<!-- Отзывы -->
+<div class="sidebar-reviews text-muted main-font col-xs-12">
+	<h4 class="main-font-semi-bold">Отзывы</h4>
+	<div class="read-reviews">
+										
+		<div class="review" ng-repeat="review in ctrl.reviews | orderBy: 'date' : 'true'">
+			<p class="review-content">{{review.text}}</p>
+			<p class="review-author pull-right"><i>{{review.name}}</i></p><br>
+			<p class="review-date pull-right"><i>{{ review.date | date : 'dd.MM.yyyy' }}</i></p>
+	  	<hr>
+		</div>
+
+	</div>
+	&nbsp;
+		
+	<button type="button" class="btn btn-default btn-sm btn-block button-gradient-gray main-color" ng-click="ctrl.reviewFormIsVisible = !ctrl.reviewFormIsVisible">
+  	Оставить отзыв
+  	<span class="glyphicon glyphicon-menu-down" ng-show="!ctrl.reviewFormIsVisible"></span>
+  	<span class="glyphicon glyphicon-menu-up" ng-show="ctrl.reviewFormIsVisible"></span>
+  </button>
+  							
+	<form class="review-form" name="reviewForm" novalidate ng-show="ctrl.reviewFormIsVisible">
+	  <div class="form-group">
+	    <label for="reviewText"></label>
+	    <textarea maxlength="600" class="form-control input-sm" rows="4" id="reviewText" placeholder="Ваше мнение" ng-model="ctrl.reviewNew.text" required></textarea>
+	  </div>
+
+	  <div class="form-group">
+	    <input type="text" maxlength="50" class="form-control input-sm" id="reviewAuthor" placeholder="Ваше имя" ng-model="ctrl.reviewNew.name" required>
+	  </div>
+
+	  <div class="text-danger" ng-show="reviewForm.$submitted && reviewForm.$invalid && mainCtrl.reviewNew.sendStatus !='Fail'">Заполните все поля перед отправкой</div>
+
+  	<button type="submit" class="btn btn-default btn-xs pull-right button-gradient-gray" ng-click="ctrl.send(ctrl.reviewNew, reviewForm)" ng-show="ctrl.reviewNew.sendStatus === ''">Отправить</button>
+
+  	<!-- Сообщение о успешной/не успешной отправке -->
+  	<div class="pull-right" ng-show="ctrl.reviewNew.sendStatus !=''">
+  		<span ng-show="ctrl.reviewNew.sendStatus === 'OK'">Отправлено&nbsp;</span>
+			<span class="text-danger" ng-show="ctrl.reviewNew.sendStatus === 'Fail'">Не удалось отправить&nbsp;</span>
+  		<button type="button" class="btn btn-sm btn-default button-gradient-gray" ng-click="ctrl.afterSent(ctrl.reviewNew, reviewForm)">OK</button>
+		</div>
+		<br>
+
+  </form>
+
+</div>

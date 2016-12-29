@@ -1,0 +1,71 @@
+<!-- V A C A N C I E S  -->
+
+<div ng-controller="VacanciesEditController as vacCtrl">
+
+	<div class="form-group col-xs-4 col-md-4 col-md-offset-1 col-lg-3 col-lg-offset-2">
+	  <label for="vacancySelect">Вакансия</label>
+	  <select class="form-control" id="vacancySelect" ng-model="vacCtrl.filterByVacancy" ng-change="vacCtrl.filterVacancies()">
+		  <option ng-repeat="vacancyName in vacCtrl.vacanciesListAll">{{vacancyName}}</option>
+		</select>
+	</div>
+
+	<div class="form-group col-xs-4 col-md-4 col-lg-3">
+	  <label for="fleetSelect">Флот</label>
+	  <select class="form-control" id="fleetSelect" ng-model="vacCtrl.filterByFleet" ng-change="vacCtrl.filterVacancies()">
+		  <option ng-repeat="fleetType in vacCtrl.fleetList">{{fleetType}}</option>
+		</select>
+	</div>
+
+	<div class="form-group col-xs-4 col-md-2 col-lg-2">
+	  <label for="search">Поиск</label>
+	  <input type="text" class="form-control" id="search" ng-model="vacCtrl.search">
+	</div>
+	
+	<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+		<div class="main-content col-xs-12">
+			<h4 class="main-color main-font main-font-semi-bold">Результатов поиска: {{ (vacCtrl.vacanciesFiltered | filter : vacCtrl.search).length }}</h4>
+			
+			<div class="col-xs-12 vacancy-wrap main-color main-font" ng-repeat="vacancy in vacCtrl.vacanciesFiltered | filter : vacCtrl.search | orderBy: 'date' : 'true'">
+				<div ng-hide="vacancy.isEditing">
+					<p>Название компании: <span class="text-primary">{{vacancy.companyName}}</span></p>
+					<p>Вакансия: <span class="text-primary">{{vacancy.vacancy}}</span></p>
+					<p>Флот: <span class="text-primary">{{vacancy.fleetType}}</span></p>
+					<p>Тип судна: <span class="text-primary">{{vacancy.vesselType}}</span></p>
+					<p>DW (т.): <span class="text-primary">{{vacancy.vesselDW}}</span></p>
+					<p>Дата постройки: <span class="text-primary">{{vacancy.vesselDateOfConstr}}</span></p>
+					<p>Зарплата: <span class="text-primary">{{vacancy.payment}}</span></p>
+					<p>Дополнительные данные: <span class="text-primary">{{vacancy.optional}}</span></p>
+					<p>Телефон отдела кадров: <span class="text-primary">{{vacancy.phone}}</span></p>
+					<p>E-mail: <span class="text-primary">{{vacancy.email}}</span></p>
+					<p>Размещено: <span class="text-primary">{{vacancy.date | date : 'dd.MM.yyyy'}}</span></p>
+					<p>ID: <span class="text-primary">{{vacancy.id}}</span></p>
+
+
+					<div class="row">
+						<div class="col-xs-6 col-sm-3 col-sm-offset-6">
+							<!-- Скрывать, когда начинается редактирование одной вакансии -->
+							<button ng-hide="vacCtrl.isEditing" type="button" class="btn btn-default btn-block button-gradient main-color" ng-click="vacancy.isEditing = true && !vacCtrl.isEditing; vacCtrl.isEditing = true"><span class="glyphicon glyphicon-pencil"></span>&nbsp;Изменить</button>
+						</div>
+						
+						<div class="col-xs-6 col-sm-3">
+							<!-- Вызывается modal для подтверждения,
+							оттуда уже взывается vacCtrl.gvDelete(vacCtrl.updVac) -->
+							<button type="button" class="btn btn-default btn-block button-gradient main-color" data-toggle="modal" data-target="#confDelModal" ng-click="vacCtrl.updObj = vacancy"><span class="glyphicon glyphicon-trash"></span>&nbsp;Удалить</button> 
+						</div>
+					</div>
+				</div>
+				
+				<div ng-if="vacancy.isEditing">
+					<div gv-edit-vacancy></div>
+				</div>
+
+				<div gv-confirm-del-modal ctrl="vacCtrl"></div>
+			
+			</div>
+
+		</div>
+	</div>
+
+	
+
+</div>

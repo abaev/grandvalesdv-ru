@@ -1,0 +1,18 @@
+{
+	"transportConfig": {
+    "service": "Yandex",
+    "auth": {
+      "user": "grandvalesdv@yandex.ru",
+      "pass": "senderR0dr1ges"
+    },
+    "tls": {"rejectUnauthorized": false}
+  },
+
+  "mailOptions": {
+  	"from": "'Сайт Гранд-Валес ДВ' <grandvalesdv@yandex.ru>",
+	  "to": "lowrydertrue@gmail.com, grandvalesdv@gmail.com",
+	  "subject": "Сообщение сайта Гранд-Валес ДВ",
+	  "text": "",
+	  "html": ""
+  }
+}

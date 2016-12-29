@@ -1,0 +1,39 @@
+<!-- E D I T  R E V I E W  I N S T A N C E -->
+<form class="" name="reviewForm" ng-controller="ReviewInstanceEditingCtrl as ctrl" novalidate>
+  <div class="form-group">
+    <label for="reviewText">Текст отзыва</label>
+    <textarea maxlength="600" class="form-control input-sm" rows="4" id="reviewText" placeholder="" ng-model="ctrl.review.text" ng-init="ctrl.review.text = review.text" required></textarea>
+  </div>
+	
+	<div class="form-horizontal">
+	  <div class="form-group">
+	  	<label for="reviewAuthor" class="col-xs-2 col-sm-1 control-label">Имя</label>
+	    <div class="col-xs-10 col-sm-11">
+	    	<input type="text" maxlength="50" class="form-control input-sm" id="reviewAuthor" placeholder="" ng-model="ctrl.review.name" ng-init="ctrl.review.name = review.name" required>
+	    </div>
+	  </div>
+  </div>
+	
+	<div class="form-horizontal">
+	  <div class="form-group">
+	    <label for="reviewDate" class="col-xs-4 col-md-3 control-label">Размещено</label>
+	    <div class="col-xs-8 col-md-9">
+		    <input type="text" maxlength="70" class="form-control input-sm" id="reviewDate" placeholder="" ng-model="ctrl.review.date" ng-init="ctrl.review.date = (review.date | date : 'dd.MM.yyyy')" gv-date-picker required>
+		  </div>
+	  </div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-6">
+			<button type="button" class="btn btn-default btn-sm btn-block button-gradient-gray main-color" ng-click="review.isEditing = false; revCtrl.isEditing = false;"><span class="glyphicon glyphicon-remove"></span>&nbsp;Отмена</button>
+		</div>
+
+		<div class="col-xs-6">
+			<button type="button" class="btn btn-default btn-sm btn-block button-gradient-gray main-color" data-toggle="modal" data-target="#confEditModal" ng-init="ctrl.form = reviewForm; ctrl.objOld = review; ctrl.obj = ctrl.review" ng-click="ctrl.obj = ctrl.review"><span class="glyphicon glyphicon-save"></span>&nbsp;Сохранить</button>
+		</div>
+	</div>
+
+	<div gv-confirm-edit-modal form-ctrl="ctrl"></div>
+
+</form>
+<hr>

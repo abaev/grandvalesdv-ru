@@ -1,0 +1,16 @@
+<div gv-filters-select></div>
+
+<h4 class="main-color main-font main-font-semi-bold"><span class="glyphicon glyphicon-search"></span>&nbsp;Результатов поиска: {{mainCtrl.vacanciesFiltered.length}}</h4>
+
+<div class="vacancy-wrap main-color main-font" ng-repeat="vacancy in mainCtrl.vacanciesFiltered | orderBy: 'date' : 'true'">
+	<p class="main-font-semi-bold">Вакансия: <span class="text-primary">{{vacancy.vacancy}}</span></p>
+	<p ng-show="vacancy.fleetType.length && vacancy.fleetType.length != 0">Флот: <span class="text-primary">{{vacancy.fleetType}}</span></p>
+	<p>Тип судна: <span class="text-primary">{{vacancy.vesselType}}</span></p>
+	<p>DW (т.): <span class="text-primary">{{vacancy.vesselDW}}</span></p>
+	<p ng-show="vacancy.vesselDateOfConstr.length && vacancy.vesselDateOfConstr.length != 0">Дата постройки: <span class="text-primary">{{vacancy.vesselDateOfConstr}}</span></p>
+	<p>Зарплата: <span class="text-primary">{{vacancy.payment}}</span></p>
+	<p ng-show="vacancy.optional.length && vacancy.optional.length != 0"><span class="text-primary">{{vacancy.optional}}</span></p>
+	<p>Размещено: <span class="text-primary">{{vacancy.date | date : 'dd.MM.yyyy'}}</span></p>
+</div>
+
+

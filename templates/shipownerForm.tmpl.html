@@ -1,0 +1,83 @@
+<!-- Анкета для судовладельца -->
+<button type="button" class="btn btn-default btn-block button-gradient main-color" ng-click="mainCtrl.sidebarFormsShowHide('shipownerFormIsVisible')">
+	Заявка для судовладельца
+	<span class="glyphicon glyphicon-menu-down" ng-show="!mainCtrl.shipownerFormIsVisible"></span>
+	<span class="glyphicon glyphicon-menu-up" ng-show="mainCtrl.shipownerFormIsVisible"></span>
+</button>
+
+<div ng-show="mainCtrl.shipownerFormIsVisible">
+	<!-- Форма для судовладельца -->
+  <form class="shipowner-form col-xs-12" name="shipownerForm" novalidate="">
+  	
+  	<br>
+  	<p><sup>*</sup>&nbsp;- Обязательные для заполнения поля</p>
+  	<br>
+  	<div class="form-group">
+	    <label for="shipownerCompanyName">Название компании<sup>*</sup></label>
+	    <input type="text" maxlength="70" class="form-control input-sm" id="shipownerCompanyName" placeholder="" ng-model="ctrl.shipowner.companyName" required>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="shipownerVesselType">Тип судна<sup>*</sup></label>
+	    <input type="text" maxlength="70" class="form-control input-sm" id="shipownerVesselType" placeholder="" ng-model="ctrl.shipowner.vesselType" required>
+	  </div>
+
+	  <div class="form-inline"> <!-- По возможности выровнять -->
+		  <div class="form-group">
+		    <label for="shipownerDW">DW (т.)<sup>*</sup></label>
+		    <input type="number" min="0" class="form-control input-sm" id="shipownerDW" placeholder="" ng-model="ctrl.shipowner.vesselDW" required>
+			</div>
+	  </div>
+
+	  <div class="form-inline margin-top-5"> <!-- По возможности выровнять -->
+		  <div class="form-group">
+		    <label for="shipownerDateOfConstr">Дата постройки </label>
+		    <select class="form-control input-sm" id="shipownerDateOfConstr" ng-model="ctrl.shipowner.vesselDateOfConstr">
+				  <option ng-repeat="yearOfConst in ctrl.shipownerDateOfConstrRange">{{yearOfConst}}</option>
+				</select>
+			</div>
+	  </div>
+
+	  <div class="form-group margin-top-5">
+	    <label for="shipownerVacancy">Вакансия<sup>*</sup></label>
+	    <select class="form-control input-sm" id="shipownerVacancy" ng-model="ctrl.shipowner.vacancy" required>
+			  <option ng-repeat="vacancyName in mainCtrl.vacanciesList">{{vacancyName}}</option>
+			</select>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="shipownerPayment">Зарплата<sup>*</sup></label>
+	    <input type="text" maxlength="70" class="form-control input-sm" id="shipownerPayment" placeholder="" ng-model="ctrl.shipowner.payment" required>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="shipownerOptional">Дополнительные данные по вакансии</label>
+	    <textarea class="form-control input-sm" maxlength="400" id="shipownerOptional" name="" cols="" rows="2" ng-model="ctrl.shipowner.optional"></textarea>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="shipownerPhone">Телефон отдела кадров<sup>*</sup></label>
+	    <input type="tel" maxlength="70" class="form-control input-sm" id="shipownerPhone" placeholder="" ng-model="ctrl.shipowner.phone" required>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="shipownerEmail">E-mail</label>
+	    <input type="email" maxlength="70" class="form-control input-sm" id="shipownerEmail" placeholder="" ng-model="ctrl.shipowner.email" name="shipownerEmail">
+	  </div>
+
+		<div class="text-danger" ng-show="shipownerForm.$submitted && shipownerForm.$invalid && shipowner.sendStatus !='Fail'">Заполните все обязательные поля перед отправкой</div>
+
+  	<button type="submit" class="btn btn-default pull-right button-gradient main-color" ng-click="ctrl.send(ctrl.shipowner, shipownerForm)" ng-show="ctrl.shipowner.sendStatus === ''">Отправить</button>
+
+  	<!-- Сообщение о успешной/не успешной отправке -->
+  	<div class="pull-right" ng-show="ctrl.shipowner.sendStatus !=''">
+  		<span ng-show="ctrl.shipowner.sendStatus === 'OK'">Отправлено&nbsp;</span>
+			<span class="text-danger" ng-show="ctrl.shipowner.sendStatus === 'Fail'">Не удалось отправить&nbsp;</span>
+  		<button type="button" class="btn btn-sm btn-default button-gradient main-color" ng-click="ctrl.afterSent(ctrl.shipowner, shipownerForm)">OK</button>
+		</div>
+
+  	<br>
+  								  	
+  </form>
+  <hr>
+</div>

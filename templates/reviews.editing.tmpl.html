@@ -1,0 +1,110 @@
+<!-- R E V I E W S -->
+<div ng-controller="ReviewsEditController as revCtrl">
+	<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+		
+		<div class="main-content col-xs-12">
+			<br>
+			<div class="form-horizontal">
+				<div class="form-group">
+				  <label for="search" class="col-xs-2 col-xs-offset-1 col-sm-offset-2 control-label">Поиск</label>
+				  <div class="col-xs-8 col-sm-4">
+					  <input type="text" class="form-control" id="search" ng-model="revCtrl.search">
+				  </div>
+				</div>
+			</div>
+
+			<div class="row">
+				
+				<div class="col-xs-12 col-md-6 text-muted"> <!-- Отзывы на сайте -->
+					
+					<div class="read-reviews">
+						<h4 class="main-font-semi-bold">Отзывы на сайте: {{ (revCtrl.reviewsOnSite | filter: revCtrl.search | orderBy: 'date' : 'true').length }}</h4>
+						<hr>		
+						<div class="review" ng-repeat="review in revCtrl.reviewsOnSite | filter: revCtrl.search | orderBy: 'date' : 'true'">
+							<div ng-hide="review.isEditing">
+								<p class="review-content">{{review.text}}</p>
+								<p class="review-author pull-right"><i>{{review.name}}</i></p><br>
+								<p class="review-date pull-right"><i>{{ review.date | date : 'dd.MM.yyyy' }}</i></p><br>
+								<p class="review-date pull-right">ID:&nbsp;<i>{{review.id}}</i></p>
+								<br>
+
+								<button type="button" class="btn btn-default btn-sm btn-block button-gradient-gray main-color" ng-hide="revCtrl.isEditing" ng-click="review.isEditing = true && !revCtrl.isEditing; revCtrl.isEditing = true">
+									<span class="glyphicon glyphicon-pencil"></span>&nbsp;Редактировать
+							  </button>
+															
+								<div class="row">
+									<div class="col-sm-6 col-xs-12">
+									  <button type="button" class="btn btn-default btn-sm btn-block button-gradient-gray main-color margin-top-5" data-toggle="modal" data-target="#confPublishModal" ng-click="revCtrl.updObj = review">
+											<span class="glyphicon glyphicon-eye-close"></span>&nbsp;Убрать с сайта
+									  </button>
+									</div>
+									
+									<div class="col-sm-6 col-xs-12">
+									  <button type="button" class="btn btn-default btn-sm btn-block button-gradient-gray main-color margin-top-5" data-toggle="modal" data-target="#confDelModal" ng-click="revCtrl.updObj = review">
+											<span class="glyphicon glyphicon-trash"></span>&nbsp;Удалить
+									  </button>
+									</div>
+								</div>
+						  	<hr>
+							</div>
+
+					  	<div ng-if="review.isEditing">
+								<div gv-edit-review></div>
+							</div>
+
+						</div>
+					</div>
+				
+				</div> <!-- Конец Отзывы на сайте -->
+				
+				<div class="col-xs-12 col-md-6 text-muted"> <!-- Неопубликованные отзывы -->
+					
+					<div class="read-reviews">
+						<h4 class="main-font-semi-bold">Неопубликованные отзывы: {{ (revCtrl.reviewsNew | filter: revCtrl.search | orderBy: 'date' : 'true').length }}</h4>
+						<hr>		
+						<div class="review" ng-repeat="review in revCtrl.reviewsNew | filter: revCtrl.search | orderBy: 'date' : 'true'">
+							<div ng-hide="review.isEditing">
+								<p class="review-content">{{review.text}}</p>
+								<p class="review-author pull-right"><i>{{review.name}}</i></p><br>
+								<p class="review-date pull-right"><i>{{ review.date | date : 'dd.MM.yyyy' }}</i></p><br>
+								<p class="review-date pull-right">ID:&nbsp;<i>{{review.id}}</i></p>
+								<br>
+
+								<button type="button" class="btn btn-default btn-sm btn-block button-gradient-gray main-color" ng-hide="revCtrl.isEditing" ng-click="review.isEditing = true && !revCtrl.isEditing; revCtrl.isEditing = true">
+									<span class="glyphicon glyphicon-pencil"></span>&nbsp;Редактировать
+							  </button>
+															
+								<div class="row">
+									<div class="col-sm-6 col-xs-12">
+									  <button type="button" class="btn btn-default btn-sm btn-block button-gradient-gray main-color margin-top-5" data-toggle="modal" data-target="#confPublishModal" ng-click="revCtrl.updObj = review">
+											<span class="glyphicon glyphicon-eye-open"></span>&nbsp;Поместить на сайт
+									  </button>
+									</div>
+									
+									<div class="col-sm-6 col-xs-12">
+									  <button type="button" class="btn btn-default btn-sm btn-block button-gradient-gray main-color margin-top-5" data-toggle="modal" data-target="#confDelModal" ng-click="revCtrl.updObj = review">
+											<span class="glyphicon glyphicon-trash"></span>&nbsp;Удалить
+									  </button>
+									</div>
+								</div>
+						  	<hr>
+							</div>
+
+					  	<div ng-if="review.isEditing">
+								<div gv-edit-review></div>
+							</div>
+							
+						</div>
+					</div>
+				
+				</div> <!-- Конец неопубликованные отзывы -->
+
+				<div gv-confirm-del-modal ctrl="revCtrl"></div>
+
+				<div gv-confirm-publish-modal ctrl="revCtrl"></div>
+
+
+			</div>
+		</div>
+	</div>
+</div>

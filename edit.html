@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="GVEditApp">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Редактор Гранд Валес ДВ</title>
+
+	<!-- F A V I C O N S -->
+	<link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="./icon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="./icon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="./icon/manifest.json">
+	<link rel="mask-icon" href="./icon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="./icon/favicon.ico">
+	<meta name="msapplication-config" content="./icon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff"> <!-- E N D  F A V I C O N S -->
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600&amp;subset=cyrillic" rel="stylesheet">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+	<!-- jQuery UI -->
+	<link rel="stylesheet" href="./lib/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="./lib/jquery-ui/jquery-ui.theme.min.css">
+	<script src="./lib/jquery-ui/jquery-ui.min.js"></script>
+	
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.min.js"></script>
+  
+  <link rel="stylesheet" href="style.edit.css">
+  <script src="./js/GVEditApp.directives.js"></script>
+  <script src="./js/GVEditApp.services.js"></script>
+  <script src="./js/GVEditApp.controllers.js"></script>
+  <script src="./js/app.edit.js"></script>
+</head>
+<body ng-controller="GVEditAppController as mainCtrl">
+	<div class="wrap">
+		<div class="main conteiner-fluid main-color main-font">
+			<div gv-auth ng-if="mainCtrl.authStatus != 'Granted'"></div>
+			<div gv-edit ng-if="mainCtrl.authStatus === 'Granted'"></div>
+		</div>
+	</div>
+</body>
+</html>

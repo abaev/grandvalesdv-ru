@@ -1,0 +1,74 @@
+<!-- Анкета соискателя -->
+<button type="button" class="btn btn-default btn-block button-gradient main-color" ng-click="mainCtrl.sidebarFormsShowHide('candidateFormIsVisible')">
+	Анкета для соискателя&nbsp;
+	<span class="glyphicon glyphicon-menu-down" ng-show="!mainCtrl.candidateFormIsVisible"></span>
+	<span class="glyphicon glyphicon-menu-up" ng-show="mainCtrl.candidateFormIsVisible"></span>
+</button>
+
+<div ng-show="mainCtrl.candidateFormIsVisible">
+	<!-- Форма для соискателя -->
+  <form class="candidate-form col-xs-12" novalidate="" name="candidateForm">
+  	<br>
+  	<div class="form-group">
+	    <label for="candidateName">ФИО</label>
+	    <input type="text" maxlength="70" class="form-control input-sm" id="candidateName" ng-model="ctrl.candidate.name" placeholder="" required="">
+	  </div>
+		
+		<div class="form-inline"> <!-- По возможности выровнять -->
+		  <div class="form-group">
+		    <label for="candidateAge">Год рождения </label>
+		    <select class="form-control input-sm" id="candidateAge" ng-model="ctrl.candidate.ageYear" required>
+				  <option ng-repeat="year in ctrl.candidateAgeRange">{{year}}</option>
+				</select>
+			</div>
+	  </div>
+
+	  <div class="form-group margin-top-5">
+	    <label for="candidatePlace">Место проживания</label>
+	    <input type="text" maxlength="70" class="form-control input-sm" id="ctrl.candidate.place" ng-model="ctrl.candidate.place" placeholder="" required>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="vacancySelectInForm">Должность</label>
+	    <select class="form-control input-sm" id="vacancySelectInForm" multiple data-toggle="tooltip" title="удерживайте Ctrl для выбора нескольких вариантов" gv-tooltip ng-model="ctrl.candidate.vacancies" required>
+			  <option ng-repeat="vacancyName in mainCtrl.vacanciesList">{{vacancyName}}</option>
+			</select>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="candidateExperience">Опыт работы</label>
+	    <textarea maxlength="400" class="form-control input-sm" rows="2" id="candidateExperience" placeholder="кратко: сколько лет, какие типы судов" ng-model="ctrl.candidate.experience" required></textarea>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="candidateLastJob">Последнее место работы</label>
+	    <textarea maxlength="400" class="form-control input-sm" rows="2" id="candidateLastJob" placeholder="" ng-model="ctrl.candidate.lastJob" required></textarea>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="candidatePhone">Мобильный телефон</label>
+	    <input type="tel" maxlength="70" class="form-control input-sm" id="candidatePhone" placeholder="" ng-model="ctrl.candidate.phone" required>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="candidateEmail">E-mail</label>
+	    <input type="email" maxlength="70" class="form-control input-sm" id="candidateEmail" placeholder="" ng-model="ctrl.candidate.email" required>
+	  </div>
+
+	  <div class="text-danger" ng-show="candidateForm.$submitted && candidateForm.$invalid && ctrl.candidate.sendStatus !='Fail'">Заполните все поля перед отправкой</div>
+
+  	<button type="submit" class="btn btn-default pull-right button-gradient main-color" ng-click="ctrl.send(ctrl.candidate, candidateForm)" ng-show="ctrl.candidate.sendStatus === ''">Отправить</button>
+  			
+		<!-- Сообщение о успешной/не успешной отправке -->
+  	<div class="pull-right" ng-show="ctrl.candidate.sendStatus !=''">
+  		<span ng-show="ctrl.candidate.sendStatus === 'OK'">Отправлено&nbsp;</span>
+			<span class="text-danger" ng-show="ctrl.candidate.sendStatus === 'Fail'">Не удалось отправить&nbsp;</span>
+  		<button type="button" class="btn btn-sm btn-default button-gradient main-color" ng-click="ctrl.afterSent(ctrl.candidate, candidateForm)">OK</button>
+		</div>
+
+  </form>
+  <div>&nbsp;</div>
+	<hr class="sidebar-hr">
+</div>
+
+<br ng-show="!mainCtrl.candidateFormIsVisible">
