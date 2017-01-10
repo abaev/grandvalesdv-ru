@@ -169,7 +169,7 @@
 			],
 			[
 				"re",
-				"required	Attr"
+				"required\tAttr"
 			],
 			[
 				"u",
@@ -185,11 +185,11 @@
 			],
 			[
 				"cl",
-				"class	Attr"
+				"class\tAttr"
 			],
 			[
 				"max",
-				"maxlength	Attr"
+				"maxlength\tAttr"
 			],
 			[
 				"cur",
@@ -321,7 +321,7 @@
 			],
 			[
 				"on",
-				"onclick	Attr"
+				"onclick\tAttr"
 			],
 			[
 				"r",
@@ -357,7 +357,7 @@
 			],
 			[
 				"st",
-				"style	Tag"
+				"style\tTag"
 			]
 		]
 	},
@@ -368,6 +368,7 @@
 			"settings":
 			{
 				"buffer_size": 6659,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -376,6 +377,7 @@
 			"settings":
 			{
 				"buffer_size": 3250,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -384,6 +386,7 @@
 			"settings":
 			{
 				"buffer_size": 12827,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -392,6 +395,7 @@
 			"settings":
 			{
 				"buffer_size": 4631,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -400,6 +404,7 @@
 			"settings":
 			{
 				"buffer_size": 1041,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -408,6 +413,7 @@
 			"settings":
 			{
 				"buffer_size": 3841,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -416,6 +422,7 @@
 			"settings":
 			{
 				"buffer_size": 4180,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -424,6 +431,7 @@
 			"settings":
 			{
 				"buffer_size": 2771,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -432,6 +440,7 @@
 			"settings":
 			{
 				"buffer_size": 792,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -440,6 +449,7 @@
 			"settings":
 			{
 				"buffer_size": 1004,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -448,6 +458,7 @@
 			"settings":
 			{
 				"buffer_size": 1133,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -456,6 +467,7 @@
 			"settings":
 			{
 				"buffer_size": 504,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -464,6 +476,7 @@
 			"settings":
 			{
 				"buffer_size": 1971,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -472,6 +485,7 @@
 			"settings":
 			{
 				"buffer_size": 3201,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -480,6 +494,7 @@
 			"settings":
 			{
 				"buffer_size": 5524,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -488,6 +503,7 @@
 			"settings":
 			{
 				"buffer_size": 720,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -496,6 +512,7 @@
 			"settings":
 			{
 				"buffer_size": 1190,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -504,6 +521,7 @@
 			"settings":
 			{
 				"buffer_size": 675,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -512,6 +530,7 @@
 			"settings":
 			{
 				"buffer_size": 4817,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -520,6 +539,7 @@
 			"settings":
 			{
 				"buffer_size": 2251,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -528,6 +548,7 @@
 			"settings":
 			{
 				"buffer_size": 3450,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -544,6 +565,7 @@
 			"settings":
 			{
 				"buffer_size": 91,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -552,6 +574,7 @@
 			"settings":
 			{
 				"buffer_size": 3834,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -560,6 +583,7 @@
 			"settings":
 			{
 				"buffer_size": 1163,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -568,6 +592,7 @@
 			"settings":
 			{
 				"buffer_size": 3154,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -576,6 +601,7 @@
 			"settings":
 			{
 				"buffer_size": 4637,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -584,6 +610,7 @@
 			"settings":
 			{
 				"buffer_size": 1530,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -592,6 +619,7 @@
 			"settings":
 			{
 				"buffer_size": 7311,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -599,7 +627,8 @@
 			"file": "server/server.js",
 			"settings":
 			{
-				"buffer_size": 9766,
+				"buffer_size": 9767,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		}
@@ -708,6 +737,13 @@
 	},
 	"file_history":
 	[
+		"/C/my_folder/_web_dev/Invoice/app/js/app.services.js",
+		"/C/my_folder/_web_dev/Invoice/app/js/app.controllers.js",
+		"/C/my_folder/_web_dev/Invoice/app/js/app.directives.js",
+		"/C/my_folder/_web_dev/Invoice/app/js/app.js",
+		"/C/my_folder/_web_dev/Invoice/app/index.html",
+		"/C/my_folder/_web_dev/Invoice/app/style.css",
+		"/C/my_folder/_web_dev/test/invoice/index.html",
 		"/C/my_folder/_web_dev/Invoice/app/.git/config",
 		"/C/Users/User/.gitconfig",
 		"/C/my_folder/_web_dev/GrandValesDV/app/.git/.gitignore",
@@ -723,7 +759,6 @@
 		"/C/my_folder/_web_dev/GrandValesDV/app back-up/app2/index.html",
 		"/C/my_folder/_web_dev/GrandValesDV/app/.htaccess",
 		"/C/my_folder/_web_dev/GrandValesDV/app/5",
-		"/C/my_folder/_web_dev/Invoice/app/index.html",
 		"/C/my_folder/_web_dev/GrandValesDV/app/new.html",
 		"/Z/home/gv/www/server/server.js",
 		"/Z/home/gv/www/style.edit.css",
@@ -829,13 +864,7 @@
 		"/C/my_folder/_web_dev/GrandValesDV/app/templates/auth.html",
 		"/C/my_folder/_web_dev/GrandValesDV/reviews1.json",
 		"/C/my_folder/_web_dev/GrandValesDV/candidates1.json",
-		"/C/Users/User/AppData/Local/Temp/F3T1F27.tmp/server.js",
-		"/C/my_folder/_web_dev/GrandValesDV/candidates.json",
-		"/C/my_folder/_web_dev/GrandValesDV/vacancies1.json",
-		"/C/my_folder/_web_dev/GrandValesDV/data/candidates.json",
-		"/C/my_folder/_web_dev/Angular ru tutorial/angular-phonecat/app/js/services.js",
-		"/C/my_folder/_web_dev/Angular ru tutorial/angular-phonecat/app/js/controllers.js",
-		"/C/my_folder/_web_dev/Angular ru tutorial/angular-phonecat/app/index.html"
+		"/C/Users/User/AppData/Local/Temp/F3T1F27.tmp/server.js"
 	],
 	"find":
 	{
@@ -853,6 +882,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"servePost",
 			"fleetType",
 			"review-author",
 			"vacancy",
@@ -979,8 +1009,7 @@
 			"Ctrl",
 			"ctrl",
 			"vacanciesAvailable",
-			"mainCtrl",
-			"filterVacancies"
+			"mainCtrl"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1003,7 +1032,7 @@
 	"groups":
 	[
 		{
-			"selected": 17,
+			"selected": 29,
 			"sheets":
 			[
 				{
@@ -1019,8 +1048,8 @@
 						"selection":
 						[
 							[
-								2705,
-								2705
+								5005,
+								5011
 							]
 						],
 						"settings":
@@ -1030,10 +1059,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1140.0,
+						"translation.y": 2181.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1049,8 +1078,8 @@
 						"selection":
 						[
 							[
-								3033,
-								3033
+								2404,
+								2404
 							]
 						],
 						"settings":
@@ -1059,10 +1088,10 @@
 							"tab_size": 2
 						},
 						"translation.x": 0.0,
-						"translation.y": 1260.0,
+						"translation.y": 840.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -1092,7 +1121,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1122,7 +1151,7 @@
 						"translation.y": 3300.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
@@ -1152,7 +1181,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
@@ -1182,7 +1211,7 @@
 						"translation.y": 1260.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 21,
 					"type": "text"
 				},
 				{
@@ -1211,7 +1240,7 @@
 						"translation.y": 560.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -1241,7 +1270,7 @@
 						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
@@ -1301,7 +1330,7 @@
 						"translation.y": 120.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 23,
+					"stack_index": 26,
 					"type": "text"
 				},
 				{
@@ -1368,7 +1397,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
@@ -1398,7 +1427,7 @@
 						"translation.y": 120.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 24,
 					"type": "text"
 				},
 				{
@@ -1427,7 +1456,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 22,
+					"stack_index": 25,
 					"type": "text"
 				},
 				{
@@ -1457,7 +1486,7 @@
 						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 23,
 					"type": "text"
 				},
 				{
@@ -1480,13 +1509,14 @@
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
@@ -1520,7 +1550,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -1550,7 +1580,7 @@
 						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -1580,7 +1610,7 @@
 						"translation.y": 1380.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
@@ -1609,7 +1639,7 @@
 						"translation.y": 540.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
@@ -1638,7 +1668,7 @@
 						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
@@ -1668,7 +1698,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1684,19 +1714,20 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								21,
+								16
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 27,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1712,8 +1743,8 @@
 						"selection":
 						[
 							[
-								2521,
-								2521
+								255,
+								255
 							]
 						],
 						"settings":
@@ -1723,10 +1754,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1680.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -1742,20 +1773,21 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								311,
+								318
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 120.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 26,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -1771,8 +1803,8 @@
 						"selection":
 						[
 							[
-								122,
-								122
+								91,
+								91
 							]
 						],
 						"settings":
@@ -1782,10 +1814,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 60.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -1808,13 +1840,14 @@
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 25,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -1843,7 +1876,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 24,
+					"stack_index": 27,
 					"type": "text"
 				},
 				{
@@ -1873,7 +1906,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 22,
 					"type": "text"
 				},
 				{
@@ -1882,15 +1915,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9766,
+						"buffer_size": 9767,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								559,
-								559
+								2608,
+								2608
 							]
 						],
 						"settings":
@@ -1900,10 +1933,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 180.0,
+						"translation.y": 240.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -2002,7 +2035,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 204.0,
+	"side_bar_width": 235.0,
 	"status_bar_visible": false,
 	"template_settings":
 	{

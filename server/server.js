@@ -96,7 +96,7 @@ http.createServer(function(request, response) {
   });
 }).listen(8080, function() {
   console.log('Server listening on port 8080');
-  console.log('process.cwd() ' + process.cwd())
+  console.log('process.cwd() ' + process.cwd());
   console.log('__dirname ' + __dirname);
 });
 
@@ -114,7 +114,7 @@ function sendError(response, err) {
 function send500(response) {
   sendError(response, {
       number: 500,
-      text: 'Internal Server Error'
+      message: 'Internal Server Error'
     });
 }
 
@@ -122,7 +122,7 @@ function send500(response) {
 function send403(response) {
   sendError(response, {
       number: 403,
-      text: 'Forbidden',
+      message: 'Forbidden',
       headers: {
         'WWW-Authenticate': 'Basic realm="Server access denied"'
       }
