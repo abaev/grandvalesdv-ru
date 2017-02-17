@@ -18,6 +18,14 @@
 	  </div>
 
 	  <div class="form-group">
+	    <label for="shipownerFleetType">Флот</label>
+      <select class="form-control input-sm" id="shipownerFleetType" ng-model="ctrl.shipowner.fleetType">
+			  <option value="Рыбодобывающий">Рыбодобывающий</option>
+			  <option value="Транспортный">Транспортный</option>
+			</select>
+		</div>
+
+	  <div class="form-group">
 	    <label for="shipownerVesselType">Тип судна<sup>*</sup></label>
 	    <input type="text" maxlength="70" class="form-control input-sm" id="shipownerVesselType" placeholder="" ng-model="ctrl.shipowner.vesselType" required>
 	  </div>
